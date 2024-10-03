@@ -1,0 +1,25 @@
+# asyn record for the underlying asyn octet port
+file "$(ASYN)/db/asynRecord.db" { pattern
+{P,                R,            PORT,      ADDR,   IMAX,    OMAX}
+{MPEX:ECH:HVPS:    OctetAsyn,    HVPS_modbus,     0,      80,      80}
+}
+
+# These are the A100 inputs done with word access using asynInt32 interface
+file "../../db/longinInt32.template" { pattern
+{P,           R,                PORT,       OFFSET,   DATA_TYPE,      SCAN}
+{MPEX:ECH:HVPS:,    ActualState,             HVPS_FN3,    0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    FaultId,                 HVPS_FN3,    2,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    FaultTimestamp,          HVPS_FN3,    4,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    ResetFaultCmd,           HVPS_FN3,    6,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    SmSumWarning,            HVPS_FN3,    8,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    SumFault,                HVPS_FN3,    10,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    SumFaultAct,             HVPS_FN3,    12,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    SumWarn,                 HVPS_FN3,    14,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    TargetStateCmd,          HVPS_FN3,    16,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WarnId,                  HVPS_FN3,    18,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WarnTimestamp,           HVPS_FN3,    20,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    WaterFlowOut,            HVPS_FN3,    104,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL1,      HVPS_FN3,    32,     FLOAT32_BE,  "I/O Intr"}
+
+}

@@ -1,0 +1,125 @@
+# asyn record for the underlying asyn octet port
+file "$(ASYN)/db/asynRecord.db" { pattern
+{P,                R,            PORT,      ADDR,   IMAX,    OMAX}
+{MPEX:ECH:HVPS:    OctetAsyn,    HVPS_modbus,     0,      80,      80}
+}
+
+# These are the A100 inputs done with word access using asynInt32 interface
+file "../../db/longinInt32.template" { pattern
+{P,           R,                PORT,       OFFSET,   DATA_TYPE,      SCAN}
+{MPEX:ECH:HVPS:,    ActualState,             ActualState,                0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    FaultId,                 FaultId,                    0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    FaultTimestamp,          FaultTimestamp,             0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    ResetFaultCmd,           ResetFaultCmd,              0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    SmSumWarning,            SmSumWarning,               0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    SumFault,                SumFault,                   0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    SumFaultAct,             SumFaultAct,                0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    SumWarn,                 SumWarn,                    0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    TargetStateCmd,          TargetStateCmd,             0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WarnId,                  WarnId,                     0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WarnTimestamp,           WarnTimestamp,              0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    HvpsLeakDetOk,           HvpsLeakDetOk,              0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    MvSdcSsContOn,           MvSdcSsContOn,              0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    MvSfcFuseClosed,         MvSfcFuseClosed,            0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    MvWbcTransfCbOn,         MvWbcTransfCbOn,            0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmDiffCurrDetOk,        PsmDiffCurrDetOk,           0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL1,          PsmTrafoT401TempL1,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL1_MIN,      PsmTrafoT401TempL1_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL1_MAX,      PsmTrafoT401TempL1_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL1_LOW,      PsmTrafoT401TempL1_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL1_HIGH,     PsmTrafoT401TempL1_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL1_STATUS,   PsmTrafoT401TempL1_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL2,          PsmTrafoT401TempL2,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL2_MIN,      PsmTrafoT401TempL2_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL2_MAX,      PsmTrafoT401TempL2_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL2_LOW,      PsmTrafoT401TempL2_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL2_HIGH,     PsmTrafoT401TempL2_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL2_STATUS,   PsmTrafoT401TempL2_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL3,          PsmTrafoT401TempL3,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL3_MIN,      PsmTrafoT401TempL3_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL3_MAX,      PsmTrafoT401TempL3_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL3_LOW,      PsmTrafoT401TempL3_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL3_HIGH,     PsmTrafoT401TempL3_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT401TempL3_STATUS,   PsmTrafoT401TempL3_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL1,          PsmTrafoT402TempL1,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL1_MIN,      PsmTrafoT402TempL1_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL1_MAX,      PsmTrafoT402TempL1_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL1_LOW,      PsmTrafoT402TempL1_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL1_HIGH,     PsmTrafoT402TempL1_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL1_STATUS,   PsmTrafoT402TempL1_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL2,          PsmTrafoT402TempL2,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL2_MIN,      PsmTrafoT402TempL2_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL2_MAX,      PsmTrafoT402TempL2_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL2_LOW,      PsmTrafoT402TempL2_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL2_HIGH,     PsmTrafoT402TempL2_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL2_STATUS,   PsmTrafoT402TempL2_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL3,          PsmTrafoT402TempL2,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL3_MIN,      PsmTrafoT402TempL2_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL3_MAX,      PsmTrafoT402TempL2_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL3_LOW,      PsmTrafoT402TempL2_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL3_HIGH,     PsmTrafoT402TempL2_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PsmTrafoT402TempL3_STATUS,   PsmTrafoT402TempL2_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    WaterFlowOut,          WaterFlowOut,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterFlowOut_MIN,      WaterFlowOut_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterFlowOut_MAX,      WaterFlowOut_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterFlowOut_LOW,      WaterFlowOut_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterFlowOut_HIGH,     WaterFlowOut_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterFlowOut_STATUS,   WaterFlowOut_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    WaterTempIn,          WaterTempIn,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempIn_MIN,      WaterTempIn_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempIn_MAX,      WaterTempIn_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempIn_LOW,      WaterTempIn_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempIn_HIGH,     WaterTempIn_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempIn_STATUS,   WaterTempIn_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    WaterTempOut,          WaterTempOut,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempOut_MIN,      WaterTempOut_MIN,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempOut_MAX,      WaterTempOut_MAX,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempOut_LOW,      WaterTempOut_LOW,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempOut_HIGH,     WaterTempOut_HIGH,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    WaterTempOut_STATUS,   WaterTempOut_STATUS,  0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    AccessDoorClosed,    AccessDoorClosed,   0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    AccessDoorLocked,    AccessDoorLocked,   0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    EmButNotPressed,     EmButNotPressed,    0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    ExtPssInt,           ExtPssInt,          0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    GndHookParkPosOk,    GndHookParkPosOk,   0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    GndRelClosed,        GndRelClosed,       0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    GndSwClosed,         GndSwClosed,        0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    GreenLightOnCmd,     GreenLightOnCmd,    0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    LvCbOpen,            LvCbOpen,           0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    MvSdcGndSwClosed,    MvSdcGndSwClosed,   0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    MvSfcGndSwClosed,    MvSfcGndSwClosed,   0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    MvWbcGndSwClosed,    MvWbcGndSwClosed,   0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    OrangeLightOnCmd,    OrangeLightOnCmd,   0,     INT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    RedLightOnCmd,       RedLightOnCmd,      0,     INT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    VoutMeas,          VoutMeas,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    IoutMeas,          IoutMeas,         0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    IoutMeasAverage,   IoutMeasAverage,  0,     FLOAT32_BE,  "I/O Intr"}
+
+{MPEX:ECH:HVPS:,    ReactivePower,   ReactivePower,  0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    ApparentPower,   ApparentPower,  0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    ActivePower,     ActivePower,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    PowerFactor,     PowerFactor,    0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    VoltageL12,      VoltageL12,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    VoltageL23,      VoltageL23,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    VoltageL31,      VoltageL31,     0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    CurrentL1,       CurrentL1,      0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    CurrentL2,       CurrentL2,      0,     FLOAT32_BE,  "I/O Intr"}
+{MPEX:ECH:HVPS:,    CurrentL3,       CurrentL3,      0,     FLOAT32_BE,  "I/O Intr"}
+
+}
+
+#file "../../db/aiFloat64.template" { pattern
+#{P,           R,             PORT, OFFSET,    DATA_TYPE,    LOPR, HOPR, PREC,    SCAN}
+#{MPEX:ECH:HVPS:,    VoltageL12:FLOAT32_BE,        VoltageL12,  0,     FLOAT32_BE,       -1e6,  1e6,    4,   "1 second"}
+#}
